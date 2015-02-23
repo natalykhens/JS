@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+
+</head>
+<body>
+<script>
+$(document).ready(function(){
+  $('#myform').bind('submit', function(event) {
+    $('[type=text]').each(function() {
+      if(!$(this).val().length) {	
+	    event.preventDefault();
+        $(this).css('border', '2px solid red');
+      }
+    });
+  });
+});
+</script>
+<form>
+<p>Введите</p>
+<p>Имя  Фамилия   Отчество</p><input type="text" name="name"  id="myform">
+<input type="text" name="ser-name"  id="myform">
+<input type="text" name="father-name"  id="myform"><br>
+
+м<input type="radio" name="pol" checked="checked" value="m">
+ж<input type="radio" name="pol" value="j">
+<p>Город</p><textarea name="town"  id="myform"></textarea>
+<p>Имя пользователя</p><input type="text" name="lodin"  id="myform"><br>
+<p>пароль</p><input type="text" name="pass"  id="myform"><br>
+<p>подтвердите пароль</p><input type="text" name="pass"  id="myform"><br>
+
+<p>о себе</p><textarea name="about"  id="myform"></textarea>
+<br>
+<input type="submit" name="submit"  id="myform">
+
+</form>
+
+</body>
+</html>

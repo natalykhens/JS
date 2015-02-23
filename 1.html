@@ -1,0 +1,30 @@
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title> </title>
+<script>
+function A() {
+var rect=document.getElementById("aaa");
+rect.style.left=parseInt(rect.style.left)+10;
+if (parseInt(rect.style.left)<(parseInt(rect.style.width)+510)) 
+setTimeout("A()",100);}
+
+function B () {
+var rect=document.getElementById("aaa");
+rect.style.left=parseInt(rect.style.left)-10;
+if (parseInt(rect.style.left)>(10)) 
+setTimeout("B()",100);}
+
+function C () {
+A();
+B();
+}
+</script>
+</head>
+<body onclick="C()">
+<p>Нажми на меня,и я поеду вправо. Нажми на меня еще раз,и я вернусь на свое место</p>
+<div id="aaa" style="position:absolute;top:50;left:10;width:50px;height:50px;background-color:red;"></div>
+
+</body>
+</html>
+

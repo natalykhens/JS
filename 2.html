@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+
+<style type="text/css">
+
+.closed {
+display:none;
+}
+
+
+.opened {
+display:block;
+}
+
+</style>
+</head>
+<body>
+<script type="text/javascript">
+
+function touch(divId,k) {
+
+  if(document.getElementById) {
+    var divElem = document.getElementById(divId);
+
+    if(divElem.className == "closed") {
+        divElem.className = "opened";
+         k.Show.value = "Hide"
+
+    } else {
+
+        divElem.className = "closed";
+        k.Show.value = "Show"
+        
+    }
+  }
+
+}
+</script>
+
+<form>
+<input type=button name="Show" value="Show" id="linkname" onclick="touch('openbox',this.form)">
+</form>
+
+<div id="openbox" class="closed">some text</div>
+
+</body>
+</html>
